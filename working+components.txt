@@ -1,0 +1,22 @@
+COMPONENTS REQUIRED:
+
+LINE FOLLOWER:
+              Arduino UNO(or any other arduino development board)
+              l293d motor driver*1
+              dc geared motor*2
+              ir sensors*2
+              dc 9v battery
+              castor wheel*1
+              wheels*2
+              chasis(for the bot)
+              jumper wires
+RFID READING AND AUDIO PLAYING:
+                               Arduino uno( or other variant eg:nano)
+                               raspberry pi
+                               rfid scanner*1
+                               usb cable( connecting arduino --> raspberry pi)
+WORKING:
+
+The first set of arduino codes ("line follower.ino") controls the movemennt of the bot which is basically a line follower robot.
+The second arduino code ("rfid-py") reads the rfid tags using the rfid scanner and sends the tag id serially.
+The python code("rfid_pi") is run in a raspberry pi development board into which we store the audio files corresponding to each rfid tags. The python code plays the audio corresponding to the tag id it recieved from the arduino.
